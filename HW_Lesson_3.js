@@ -107,7 +107,7 @@ function totalSalaries(salaries){
   
   function match(candidate, job) {
     let jobMax = job.maxSalary;
-    let candidateMin = candidate1.minSalary;
+    let candidateMin = candidate.minSalary;
    
     return candidateMin <= jobMax
   }
@@ -204,6 +204,8 @@ function totalSalaries(salaries){
       return greetingObj[language]
     }
   }
+
+  //  return greetingObj[language] || greetingObj['english']
   
   console.log(greet('italian'));
   console.log(greet('654654'));
@@ -250,15 +252,23 @@ function totalSalaries(salaries){
   //(number)
   // Example: factorial of 5 (5!) is 5 * 4 * 3 * 2 * 1 
   
-  function factorial(num){
-    let result = 1;
-    for(let i = 1; i<= num; i++){
-      result *= i;
-    }
-    return result
-  }
+  // function factorial(num){
+  //   let result = 1;
+  //   for(let i = 1; i<= num; i++){
+  //     result *= i;
+  //   }
+  //   return result
+  // }
   
-  console.log(factorial(3));
+  // console.log(factorial(3));
+
+  function factorial(num){
+    if(num < 2) return 1;
+    return num * factorial(num - 1) 
+   }
+   
+   console.log(factorial(5));
+
   
   // 12) write recursive function f sequence (read about it here 
   // https://geleot.ru/education/math/analytic_geometry/other/Fibonacci_number)
